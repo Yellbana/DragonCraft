@@ -1,4 +1,1 @@
-Taming dragons require 64-90 fish after being tamed, they will bend there head close to you and emit love particles.
-To ride, place a dragons saddle on the dragon and right click, to get off, shift right click.
-to open the portal to the dragon's dimension you must have a 5x5x1 ring of gold block with an (ender) dragon's egg. then you have to toss one of every scale into the ring, and the portal opens, teleporting you to the only "safe" island, a 20x20x3 floating island of bed rock.
-Every island will be around a 70x70x4 island made of a specific dragon's home biome, new ones will be added later.
+to open the portal to the drago's dimension you must have a 5x5x1 ring of gold block with a (ender) dragon's egg. then you have to toss one of every scale into the ring, and the portal opens, teleporting you to the only "safe" island, a 20x20x3 floating island of bed rock.
