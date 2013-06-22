@@ -10,10 +10,15 @@ public class ModBiomes {
     public static BiomeGenBase emerald;
 
     public static void init() {
+        initializeBiomes();
+        registerBiomes();
+    }
+    
+    public static void initializeBiomes() {
         emerald = new BiomeGenEmerald(124).setBiomeName("Emerald Dragon Biome").setMinMaxHeight(0.1f, 0.2f);
     }
 
-    public static void register() {
+    public static void registerBiomes() {
         GameRegistry.addBiome(emerald);
     }
 }

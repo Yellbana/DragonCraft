@@ -22,9 +22,7 @@ import net.minecraft.world.gen.feature.WorldGenLakes;
 import net.minecraft.world.gen.structure.MapGenMineshaft;
 import net.minecraft.world.gen.structure.MapGenStronghold;
 import net.minecraft.world.gen.structure.MapGenVillage;
-import net.yellbana.dragoncraft.DragonCraft;
-import net.yellbana.dragoncraft.block.ModBlocks;
-import scala.xml.include.sax.Main;
+import net.yellbana.dragoncraft.api.Blocks;
 
 public class ChunkProviderDragonDen implements IChunkProvider {
     private Random rand;
@@ -108,7 +106,7 @@ public class ChunkProviderDragonDen implements IChunkProvider {
                             for (int k2 = 0; k2 < 4; ++k2) {
                                 if ((d16 += d15) > 0.0D) {
                                     /** Main filler block fill's all the underground, replaces block stone **/
-                                    par3ArrayOfByte[j2 += short1] = (byte) DragonCraft.dragonEmerald.blockID;//
+                                    par3ArrayOfByte[j2 += short1] = (byte) Blocks.dragonEmerald.get().blockID;//
                                 } else if (k1 * 8 + l1 < b2) {
                                     par3ArrayOfByte[j2 += short1] = (byte) Block.waterStill.blockID;
                                 } else {
@@ -150,13 +148,13 @@ public class ChunkProviderDragonDen implements IChunkProvider {
                             var13 = -1;
                         }
                         /** Main filler block fill's all the underground, replaces block stone **/
-                        else if (var18 != DragonCraft.dragonEmerald.blockID) {
+                        else if (var18 != Blocks.dragonEmerald.get().blockID) {
                             if (var13 == -1) {
                                 if (var12 == 0) {
                                     var14 = 0;
 
                                     /** change to custom dirt **/
-                                    var15 = (byte) DragonCraft.dragonEmerald.blockID;//
+                                    var15 = (byte) Blocks.dragonEmerald.get().blockID;//
                                 } else if ((var16 >= var5 - 4) && (var16 <= var5 + 1)) {
                                     var14 = var10.topBlock;
                                     var15 = var10.fillerBlock;

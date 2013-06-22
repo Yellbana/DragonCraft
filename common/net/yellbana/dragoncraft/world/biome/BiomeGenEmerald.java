@@ -2,19 +2,25 @@ package net.yellbana.dragoncraft.world.biome;
 
 import java.util.Random;
 
+import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
-import net.yellbana.dragoncraft.DragonCraft;
-import net.yellbana.dragoncraft.block.ModBlocks;
+import net.minecraft.world.gen.feature.WorldGenMinable;
+import net.yellbana.dragoncraft.api.Blocks;
 
 public class BiomeGenEmerald extends BiomeGenBase
 {
+    private WorldGenMinable emeraldGen;
+
     public BiomeGenEmerald(int par1)
     {
         super(par1);
         this.spawnableCreatureList.clear();
-        this.topBlock = (byte)DragonCraft.dragonEmerald.blockID;
-        this.fillerBlock = (byte)DragonCraft.dragonEmerald.blockID;
+        this.topBlock = (byte)Blocks.dragonEmerald.get().blockID;
+        this.fillerBlock = (byte)Blocks.dragonEmerald.get().blockID;
+        this.theBiomeDecorator.coalGen = new WorldGenMinable(Block.oreCoal.blockID, -1);
+        this.theBiomeDecorator.goldGen = new WorldGenMinable(Block.oreGold.blockID, -1);
+        this.emeraldGen = new WorldGenMinable(Block.oreEmerald.blockID, 24);
     }
 
     public void decorate(World par1World, Random par2Random, int par3, int par4)

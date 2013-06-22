@@ -4,6 +4,7 @@ import net.minecraft.world.WorldProvider;
 import net.minecraft.world.biome.WorldChunkManagerHell;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.common.DimensionManager;
+import net.yellbana.dragoncraft.lib.DimensionIds;
 import net.yellbana.dragoncraft.world.biome.ModBiomes;
 
 public class WorldProviderDragonDen extends WorldProvider {
@@ -11,11 +12,11 @@ public class WorldProviderDragonDen extends WorldProvider {
     public void registerWorldChunkManager() {
         this.worldChunkMgr = new WorldChunkManagerHell(ModBiomes.emerald, 0.5f, 0.0f);
         this.hasNoSky = false;
-        this.dimensionId = ModDimensions.dragonDen;
+        this.dimensionId = DimensionIds.DRAGONDEN;
     }
 
     public static WorldProvider getProviderForDimension(int par0) {
-        return DimensionManager.createProviderFor(ModDimensions.dragonDen);
+        return DimensionManager.createProviderFor(DimensionIds.DRAGONDEN);
     }
 
     public String getSaveFolder() {

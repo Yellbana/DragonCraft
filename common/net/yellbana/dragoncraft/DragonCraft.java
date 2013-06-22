@@ -3,9 +3,7 @@ package net.yellbana.dragoncraft;
 import java.io.File;
 import java.util.logging.Level;
 
-import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
-import net.yellbana.dragoncraft.block.BlockDragonEmerald;
 import net.yellbana.dragoncraft.block.ModBlocks;
 import net.yellbana.dragoncraft.configuration.ConfigurationHandler;
 import net.yellbana.dragoncraft.core.handlers.VersionCheckTickHandler;
@@ -14,7 +12,6 @@ import net.yellbana.dragoncraft.core.util.VersionHelper;
 import net.yellbana.dragoncraft.creativetab.CreativeTabDC;
 import net.yellbana.dragoncraft.dimension.ModDimensions;
 import net.yellbana.dragoncraft.item.ModItems;
-import net.yellbana.dragoncraft.lib.BlockIds;
 import net.yellbana.dragoncraft.lib.Reference;
 import net.yellbana.dragoncraft.lib.Strings;
 import net.yellbana.dragoncraft.world.biome.ModBiomes;
@@ -36,15 +33,11 @@ import cpw.mods.fml.relauncher.Side;
 public class DragonCraft {
     @Instance(Reference.MOD_ID)
     public static DragonCraft instance;
-    
-    public static Block dragonEmerald = new BlockDragonEmerald(BlockIds.DRAGONEMERALD);
 
     public static CreativeTabs tabDC = new CreativeTabDC(CreativeTabs.getNextID(), Reference.MOD_ID);
 
     @FingerprintWarning
     public void invalidFingerprint(FMLFingerprintViolationEvent event) {
-
-        // Report (log) to the user that the version of Equivalent Exchange 3 they are using has been changed/tampered with
         LogHelper.log(Level.SEVERE, Strings.INVALID_FINGERPRINT_MESSAGE);
     }
 
@@ -61,28 +54,20 @@ public class DragonCraft {
 
         // Initialize the Version Check Tick Handler (Client only)
         TickRegistry.registerTickHandler(new VersionCheckTickHandler(), Side.CLIENT);
-        
+
         ModBlocks.init();
-        
+
         ModItems.init();
-        
+
         ModBiomes.init();
-        
-        //ModDimensions.init();
+
+        ModDimensions.init();
     }
 
     @Init
     public void load(FMLInitializationEvent event) {
-        
-        
-        
-        ModBlocks.register();
-        
-        ModItems.register();
-        
-        ModBiomes.register();
-        
+
         //Creative Tab Name
-        LanguageRegistry.instance().addStringLocalization("itemGroup.DragonCraft", "Dragon Craft");
+        LanguageRegistry.instance().addStringLocalization("itemGroup.DC", "Dragon Craft");
     }
 }

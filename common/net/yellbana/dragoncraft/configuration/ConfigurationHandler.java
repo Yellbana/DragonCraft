@@ -6,6 +6,7 @@ import java.io.File;
 
 import net.minecraftforge.common.Configuration;
 import net.yellbana.dragoncraft.lib.BlockIds;
+import net.yellbana.dragoncraft.lib.DimensionIds;
 import net.yellbana.dragoncraft.lib.ItemIds;
 import net.yellbana.dragoncraft.lib.Strings;
 
@@ -23,10 +24,18 @@ public class ConfigurationHandler {
 
         //Block Configs
         BlockIds.DRAGONPORTAL = config.getBlock(Configuration.CATEGORY_BLOCK, Strings.DRAGONPORTAL_NAME, BlockIds.DRAGONPORTAL_DEFAULT).getInt(BlockIds.DRAGONPORTAL_DEFAULT);
-        BlockIds.DRAGONEMERALD = config.getBlock(Configuration.CATEGORY_BLOCK, Strings.DRAGONEMERALD_NAME, BlockIds.DRAGONEMERALD_DEFAULT).getInt(BlockIds.DRAGONEMERALD_DEFAULT);
+        BlockIds.DRAGONFIRE = config.getBlock(Configuration.CATEGORY_BLOCK, Strings.DRAGONFIRE_NAME, BlockIds.DRAGONFIRE_DEFAULT).getInt(BlockIds.DRAGONFIRE_DEFAULT);
+        
+        //Terrain Block Configs
+        BlockIds.DRAGONEMERALD = config.getTerrainBlock(Configuration.CATEGORY_BLOCK, Strings.DRAGONEMERALD_NAME, BlockIds.DRAGONEMERALD_DEFAULT, null).getInt(BlockIds.DRAGONEMERALD_DEFAULT);
 
         //Item Configs
         ItemIds.DRAGONSPHERE = config.getItem(Configuration.CATEGORY_ITEM, Strings.DRAGONSPHERE_NAME, ItemIds.DRAGONSPHERE_DEFAULT).getInt(ItemIds.DRAGONSPHERE_DEFAULT);
+        ItemIds.DRAGONFLINT = config.getItem(Configuration.CATEGORY_ITEM, Strings.DRAGONFLINT_NAME, ItemIds.DRAGONFLINT_DEFAULT).getInt(ItemIds.DRAGONFLINT_DEFAULT);
+        
+        
+        //Dimension Configs
+        DimensionIds.DRAGONDEN = config.get(Configuration.CATEGORY_GENERAL, Strings.DRAGONDEN_NAME, DimensionIds.DRAGONDEN_DEFAULT).getInt(DimensionIds.DRAGONDEN_DEFAULT);
     }
 
     public static void set(String categoryName, String propertyName, String newValue) {
