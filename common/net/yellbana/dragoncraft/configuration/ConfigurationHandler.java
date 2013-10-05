@@ -30,7 +30,6 @@ public class ConfigurationHandler {
         BlockIds.DRAGONEMERALD = config.getTerrainBlock(Configuration.CATEGORY_BLOCK, Strings.DRAGONEMERALD_NAME, BlockIds.DRAGONEMERALD_DEFAULT, null).getInt(BlockIds.DRAGONEMERALD_DEFAULT);
 
         //Item Configs
-        ItemIds.DRAGONSPHERE = config.getItem(Configuration.CATEGORY_ITEM, Strings.DRAGONSPHERE_NAME, ItemIds.DRAGONSPHERE_DEFAULT).getInt(ItemIds.DRAGONSPHERE_DEFAULT);
         ItemIds.DRAGONFLINT = config.getItem(Configuration.CATEGORY_ITEM, Strings.DRAGONFLINT_NAME, ItemIds.DRAGONFLINT_DEFAULT).getInt(ItemIds.DRAGONFLINT_DEFAULT);
         
         

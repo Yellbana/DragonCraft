@@ -14,12 +14,10 @@ public class ModItems {
     }
     
     public static void initializeItems() {
-        dragonSphere = (new ItemDragonSphere(ItemIds.DRAGONSPHERE));
         dragonFlint = (new ItemDragonFlint(ItemIds.DRAGONFLINT));
     }
     
     public static void registerItems() {
-        LanguageRegistry.addName(dragonSphere, "Dragon Sphere");
         LanguageRegistry.addName(dragonFlint, "Dragon Flint");
     }
 }

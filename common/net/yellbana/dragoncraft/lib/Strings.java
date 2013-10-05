@@ -32,7 +32,6 @@ public class Strings {
     public static final String DRAGONEMERALD_NAME = "dragonEmerald";
     
     //Item Name Constants
-    public static final String DRAGONSPHERE_NAME = "dragonSphere";
     public static final String DRAGONFLINT_NAME = "dragonFlint";
     
     //Dimension Name Constants

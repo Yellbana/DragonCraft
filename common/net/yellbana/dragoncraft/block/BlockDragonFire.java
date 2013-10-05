@@ -5,7 +5,6 @@ import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFire;
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
@@ -13,7 +12,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 import net.yellbana.dragoncraft.DragonCraft;
 import net.yellbana.dragoncraft.api.Blocks;
-import scala.xml.include.sax.Main;
+import net.yellbana.dragoncraft.lib.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -26,7 +25,6 @@ public class BlockDragonFire extends BlockFire {
     public BlockDragonFire(int par1) {
         super(par1);
         setTickRandomly(true);
-        setCreativeTab(DragonCraft.tabDC);
     }
 
     public Icon getIcon(int par1, int par2) {
@@ -296,7 +294,7 @@ public class BlockDragonFire extends BlockFire {
     /** registers Icons, set textures here **/
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister par1IconRegister) {
-        this.iconArray = new Icon[] { par1IconRegister.registerIcon("Tutorial:Tutorialfire_0"), par1IconRegister.registerIcon("Tutorial:Tutorialfire_1") };
+        this.iconArray = new Icon[] { par1IconRegister.registerIcon(Reference.MOD_ID + ":" + "dragonFire_0"), par1IconRegister.registerIcon(Reference.MOD_ID + ":" + "dragonFire_0") };
     }
 
     @SideOnly(Side.CLIENT)

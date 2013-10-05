@@ -16,13 +16,13 @@ import net.yellbana.dragoncraft.DragonCraft;
 import net.yellbana.dragoncraft.api.Blocks;
 import net.yellbana.dragoncraft.dimension.TeleporterDragonDen;
 import net.yellbana.dragoncraft.lib.DimensionIds;
-import scala.xml.include.sax.Main;
+import net.yellbana.dragoncraft.lib.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockDragonPortal extends BlockBreakable {
     public BlockDragonPortal(int par1) {
-        super(par1, "DragonCraft:dragonPortal", Material.portal, false);
+        super(par1, Reference.MOD_ID + ":" + "dragonPortal", Material.portal, false);
         this.setTickRandomly(true);
         this.setHardness(-1.0F);
         this.setStepSound(soundGlassFootstep);
@@ -239,9 +239,6 @@ public class BlockDragonPortal extends BlockBreakable {
     * A randomly called display update to be able to add particles or other items for display
     */
     public void randomDisplayTick(World par1World, int par2, int par3, int par4, Random par5Random) {
-        if (par5Random.nextInt(100) == 0) {
-            par1World.playSound((double) par2 + 0.5D, (double) par3 + 0.5D, (double) par4 + 0.5D, "portal.portal", 0.5F, par5Random.nextFloat() * 0.4F + 0.8F, false);
-        }
         for (int l = 0; l < 4; ++l) {
             double d0 = (double) ((float) par2 + par5Random.nextFloat());
             double d1 = (double) ((float) par3 + par5Random.nextFloat());

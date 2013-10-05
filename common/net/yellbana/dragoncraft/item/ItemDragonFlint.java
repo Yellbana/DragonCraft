@@ -1,13 +1,13 @@
 package net.yellbana.dragoncraft.item;
 
-import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.yellbana.dragoncraft.DragonCraft;
 import net.yellbana.dragoncraft.api.Blocks;
-import scala.xml.include.sax.Main;
+import net.yellbana.dragoncraft.lib.Reference;
 
 public class ItemDragonFlint extends Item {
     public ItemDragonFlint(int par1) {
@@ -47,5 +47,9 @@ public class ItemDragonFlint extends Item {
         }
         par1ItemStack.damageItem(1, par2EntityPlayer);
         return true;
+    }
+
+    public void registerIcons(IconRegister iconRegister) {
+        this.itemIcon = iconRegister.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName().substring(5));
     }
 }

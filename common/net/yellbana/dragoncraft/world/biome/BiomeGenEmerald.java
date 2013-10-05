@@ -20,6 +20,7 @@ public class BiomeGenEmerald extends BiomeGenBase
         this.fillerBlock = (byte)Blocks.dragonEmerald.get().blockID;
         this.theBiomeDecorator.coalGen = new WorldGenMinable(Block.oreCoal.blockID, -1);
         this.theBiomeDecorator.goldGen = new WorldGenMinable(Block.oreGold.blockID, -1);
+        this.theBiomeDecorator.generateLakes = false;
         this.emeraldGen = new WorldGenMinable(Block.oreEmerald.blockID, 24);
     }
 
